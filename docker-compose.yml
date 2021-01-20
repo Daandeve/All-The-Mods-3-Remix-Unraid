@@ -1,7 +1,7 @@
 version: '3'
     services:
         minecraft-atm3-lite:
-            container_name: minecraft-atm3-lite
+            container_name: minecraft-atm3-remix
             ports:
                 - 25565:25565
                 - 25575:25575
@@ -9,5 +9,5 @@ version: '3'
                 - /dockerdata/minecraft-atm3-lite/world:/minecraft/world
                 - /dockerdata/minecraft-atm3-lite/settings:/minecraft/settings
             build:
-                context: ~/docker-images/minecraft-atm3-lite
+                context: ~/docker-images/minecraft-atm3-remix
                 dockerfile: Dockerfile
