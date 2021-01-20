@@ -15,4 +15,4 @@ done
 touch /minecraft/settings/server.properties
 ln -s /minecraft/settings/server.properties /minecraft/server.properties
 
-/minecraft/ServerStart2.sh
+/minecraft/startserver.sh
