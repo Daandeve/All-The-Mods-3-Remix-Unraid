@@ -8,7 +8,7 @@ VOLUME /minecraft/settings
 
 EXPOSE 25565
 
-RUN apk update && apk add curl bash
+RUN apk update && apk add curl bash nano
 RUN apk add unzip iputils
 
 # Download and unzip minecraft files
@@ -27,8 +27,11 @@ RUN echo "# EULA accepted on $(date)" > /minecraft/eula.txt && \
 # RUN sed -i "s/$/;/g" settings.cfg
 
 # Startup script
-COPY start.sh /minecraft/
-COPY ServerStart.sh /minecraft/
-RUN chmod +x /minecraft/*.sh
+#COPY start.sh /minecraft/
+#COPY ServerStart.sh /minecraft/
+#RUN chmod +x /minecraft/*.sh
 
-CMD ["/bin/bash", "/minecraft/start.sh"]
+#CMD ["/bin/bash", "/minecraft/start.sh"]
+
+# Startup script
+CMD ["/bin/bash", "/minecraft/startserver.sh"] 
