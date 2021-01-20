@@ -27,11 +27,8 @@ RUN echo "# EULA accepted on $(date)" > /minecraft/eula.txt && \
 # RUN sed -i "s/$/;/g" settings.cfg
 
 # Startup script
-#COPY start.sh /minecraft/
-#COPY ServerStart.sh /minecraft/
-#RUN chmod +x /minecraft/*.sh
+COPY start.sh /minecraft/
+COPY ServerStart2.sh /minecraft/
+RUN chmod +x /minecraft/*.sh
 
-#CMD ["/bin/bash", "/minecraft/start.sh"]
-
-# Startup script
-CMD ["/bin/bash", "/minecraft/startserver.sh"] 
+CMD ["/bin/bash", "/minecraft/start.sh"]
