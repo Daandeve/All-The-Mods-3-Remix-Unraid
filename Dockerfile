@@ -28,7 +28,7 @@ RUN echo "# EULA accepted on $(date)" > /minecraft/eula.txt && \
 
 # Startup script
 COPY start.sh /minecraft/
-COPY ServerStart2.sh /minecraft/
+COPY ServerStart.sh /minecraft/
 RUN chmod +x /minecraft/*.sh
 
 CMD ["/bin/bash", "/minecraft/start.sh"]
