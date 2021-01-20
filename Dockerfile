@@ -9,7 +9,7 @@ VOLUME /minecraft/settings
 EXPOSE 25565
 
 RUN apk update && apk add curl bash
-RUN apk add unzip iputils-ping
+RUN apk add unzip iputils
 
 # Download and unzip minecraft files
 RUN mkdir -p /minecraft/settings
