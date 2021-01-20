@@ -24,7 +24,7 @@ RUN echo "# EULA accepted on $(date)" > /minecraft/eula.txt && \
     echo "eula=true" >> eula.txt
 
 # Fix borked settings.cfg by sticking a semi-colon at the end of each line 
-RUN sed -i "s/$/;/g" settings.cfg
+# RUN sed -i "s/$/;/g" settings.cfg
 
 # Startup script
 COPY start.sh /minecraft/
