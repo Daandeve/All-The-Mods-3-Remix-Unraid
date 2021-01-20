@@ -7,6 +7,7 @@ VOLUME /minecraft/world
 VOLUME /minecraft/settings
 
 EXPOSE 25565
+EXPOSE 25575
 
 RUN apk update && apk add curl bash nano
 RUN apk add unzip iputils
